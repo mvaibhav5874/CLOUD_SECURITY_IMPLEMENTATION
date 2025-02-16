@@ -32,7 +32,7 @@ In this I am creating an IAM user and implemnting an policy that will granting t
 - this will make the user which attached to this policy to perfom any action in the EC2 but cant do any actions in the s3 cause of the explit deny
 - to test this create an user and give an name to the user
 - And add this policy to the user and click on custom password give an password
-  <img src="IAM_user.png" height = 300 px width = 250 px>
+  <img src="IAM_user.png">
 - there would an link that give access to the IAM user access it and try to do any change in ec you can do it
   <img src="ec2_access.png" >
 - Now try to create something in the s3 it will say view your permissions
