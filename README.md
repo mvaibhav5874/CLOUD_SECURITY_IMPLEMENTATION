@@ -38,3 +38,27 @@ In this I am creating an IAM user and implemnting an policy that will granting t
 - Now try to create something in the s3 it will say view your permissions
   <img src="S3_deny.png">
 ### SECURING STORAGE :
+### **CREATE S3 :-**
+1.**Disable ACL's**
+- search the amazon s3 in services
+- create an bucket
+- give an name to the bucket -> genral purpose
+- Control ownership of objects written to this bucket from other AWS accounts and the use of access control lists (ACLs). Object ownership determines who can specify access to objects.
+- This will make All objects in this bucket are owned by this account. Access to this bucket and its objects is specified using only policies.
+  <image src="ACLs_diable.png">
+2.**Blocking all pulic access:-**
+- this include the same steps as the upper experment
+- create an s3 bucket
+- enter the name to the s3 bucket which is globally availble
+- disable or enable the acl's
+- there is an option where vlock all public access mark that section
+  <img src="Blocking_public_access.png">
+3.**Disable the iam access:-**
+- create an iam policy
+- go to policies -> create
+- visual -> select s3 service -> access to deny
+- all the resources block
+- then this will block the access to the users who are assosated with this policy
+- The policy should be looking like this -> [deny](s3_deny.json)
+- If you try to access the s3 bucket from the IAM user this will show this 
+  <img src="S3_deny.png">
