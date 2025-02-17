@@ -70,3 +70,55 @@ In this I am creating an IAM user and implemnting an policy that will granting t
 - The policy should be looking like this -> [deny](s3_deny.json)
 - If you try to access the s3 bucket from the IAM user this will show this 
   <img src="S3_deny.png">
+### DATA-ENCRIPTION:-
+- At the top of AWS Management Console, in the search box, search for and choose S3 to open the Amazon S3 console.
+
+- In the navigation pane, choose Buckets.
+
+- Choose the link for the bucket name that contains imagebucket.
+
+- Choose the Properties tab.
+
+- In the Default encryption section, notice the setting Server-side encryption is automatically applied to new objects stored in this bucket.
+
+- Note: Amazon S3 now applies server-side encryption with Amazon S3 managed keys (SSE-S3) as the base level of encryption for every bucket in Amazon S3.
+
+- Next, you upload a file to the bucket.
+
+- At the top of the page, choose the Objects tab.
+
+- Choose Upload.
+
+- Choose Add files.
+
+- Browse to and select the clock.png file that you downloaded to your computer.
+
+- Expand the Permissions option.
+
+- Choose Grant public-read access.
+
+- acknowledge the warning, select I understand the risk of granting public-read access to the specified objects.
+
+- At the bottom of the page, choose Upload.
+
+- After the upload completes, in the upper-right corner, choose Close.
+
+- The clock.png file is now listed as an object in the bucket.
+
+- To open the file properties, choose the clock.png file.
+
+- In the Server-side encryption settings section, notice the following settings: 
+
+- This encryption setting is enabled, and the following message is displayed: Server-side encryption protects data at rest.
+
+- For Encryption type, the following message is displayed: Server-side encryption with Amazon S3 managed keys (SSE-S3).
+
+- To open the image, in the Object overview section, choose the Object URL. 
+
+- You can use this method to access an Amazon S3 object from the public internet.
+
+- The clock image opens in a browser tab. 
+
+Note: The object is encrypted, but while it displays, it has to be decrypted. The service handles this decryption transparently.
+
+In this task, you reviewed the encryption settings on the bucket. You then uploaded an object to the bucket and accessed the object by using a public link for the object. Amazon S3 transparently decrypted the object before displaying it in the browser.
