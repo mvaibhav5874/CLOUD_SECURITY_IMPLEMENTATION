@@ -22,7 +22,9 @@ In this I am creating an IAM user and implemnting an policy that will granting t
 </p>
 
 ## **Procedure:-**
+
 ### IMPLIMENTING THE IAM POLICIES:
+
 - search IAM and go to policies
 - create an policy
 - can do it with json and the visual
@@ -32,13 +34,17 @@ In this I am creating an IAM user and implemnting an policy that will granting t
 - this will make the user which attached to this policy to perfom any action in the EC2 but cant do any actions in the s3 cause of the explit deny
 - to test this create an user and give an name to the user
 - And add this policy to the user and click on custom password give an password
+
   <img src="IAM_user.png">
-- there would an link that give access to the IAM user access it and try to do any change in ec you can do it
+- There would an link that give access to the IAM user access it and try to do any change in ec you can do it
   <img src="ec2_access.png" >
 - Now try to create something in the s3 it will say view your permissions
   <img src="S3_deny.png">
+
 ### SECURING STORAGE :
+
 ### **CREATE S3 :-**
+
 1.**Disable ACL's**
 - search the amazon s3 in services
 - create an bucket
@@ -46,6 +52,7 @@ In this I am creating an IAM user and implemnting an policy that will granting t
 - Control ownership of objects written to this bucket from other AWS accounts and the use of access control lists (ACLs). Object ownership determines who can specify access to objects.
 - This will make All objects in this bucket are owned by this account. Access to this bucket and its objects is specified using only policies.
   <image src="ACLs_diable.png">
+  
 2.**Blocking all pulic access:-**
 - this include the same steps as the upper experment
 - create an s3 bucket
@@ -53,6 +60,7 @@ In this I am creating an IAM user and implemnting an policy that will granting t
 - disable or enable the acl's
 - there is an option where vlock all public access mark that section
   <img src="Blocking_public_access.png">
+
 3.**Disable the iam access:-**
 - create an iam policy
 - go to policies -> create
