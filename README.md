@@ -36,13 +36,15 @@ In this I am creating an IAM user and implemnting an policy that will granting t
 - And add this policy to the user and click on custom password give an password
 
   <img src="IAM_user.png">
-- There would an link that give access to the IAM user access it and try to do any change in ec you can do it
+- There would an link that give access to the IAM user access it and try to do any change in ec2 you can do it cause you have given access to the ec2
+
   <img src="ec2_access.png" >
 - Now try to create something in the s3 it will say view your permissions
+
   <img src="S3_deny.png">
 
 ### SECURING STORAGE :
-
+---
 ### **CREATE S3 :-**
 
 1.**Disable ACL's**
@@ -51,6 +53,7 @@ In this I am creating an IAM user and implemnting an policy that will granting t
 - give an name to the bucket -> genral purpose
 - Control ownership of objects written to this bucket from other AWS accounts and the use of access control lists (ACLs). Object ownership determines who can specify access to objects.
 - This will make All objects in this bucket are owned by this account. Access to this bucket and its objects is specified using only policies.
+
   <image src="ACLs_diable.png">
   
 2.**Blocking all pulic access:-**
@@ -59,6 +62,7 @@ In this I am creating an IAM user and implemnting an policy that will granting t
 - enter the name to the s3 bucket which is globally availble
 - disable or enable the acl's
 - there is an option where vlock all public access mark that section
+
   <img src="Blocking_public_access.png">
 
 3.**Disable the iam access:-**
@@ -69,7 +73,9 @@ In this I am creating an IAM user and implemnting an policy that will granting t
 - then this will block the access to the users who are assosated with this policy
 - The policy should be looking like this -> [deny](s3_deny.json)
 - If you try to access the s3 bucket from the IAM user this will show this 
+
   <img src="S3_deny.png">
+
 ### DATA-ENCRYPTION:-
 - At the top of AWS Management Console, in the search box, search for and choose S3 to open the Amazon S3 console.
 
@@ -81,15 +87,16 @@ In this I am creating an IAM user and implemnting an policy that will granting t
 
 - In the Default encryption section, notice the setting Server-side encryption is automatically applied to new objects stored in this bucket.
 
-- Note: Amazon S3 now applies server-side encryption with Amazon S3 managed keys (SSE-S3) as the base level of encryption for every bucket in Amazon S3.
+  ![SSE](AWS_SSE.png)
+
+>[!Note]
+>Amazon S3 now applies server-side encryption with Amazon S3 managed keys (SSE-S3) as the base level of encryption for every bucket in Amazon S3.
 
 - Next, you upload a file to the bucket.
 
 - At the top of the page, choose the Objects tab.
 
-- Choose Upload.
-
-- Choose Add files.
+- Choose Upload -> Choose Add files.
 
 - Browse to and select the clock.png file that you downloaded to your computer.
 
@@ -111,7 +118,7 @@ In this I am creating an IAM user and implemnting an policy that will granting t
 
 - This encryption setting is enabled, and the following message is displayed: Server-side encryption protects data at rest.
 
-- For Encryption type, the following message is displayed: Server-side encryption with Amazon S3 managed keys (SSE-S3).
+- For Encryption type, the following message is displayed: *Server-side encryption with Amazon S3 managed keys (SSE-S3)*.
 
 - To open the image, in the Object overview section, choose the Object URL. 
 
