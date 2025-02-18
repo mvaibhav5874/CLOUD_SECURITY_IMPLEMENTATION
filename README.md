@@ -29,7 +29,7 @@ In this I am creating an IAM user and implemnting an policy that will granting t
 - create an policy
 - can do it with json and the visual
 - I am doing it with the json
-- [user-policies](User_policy.json)
+- Refer -> [user-policies](User_policy.json)
 - in this policy i have granted access to the ec2 and deny all the access to the s3
 - this will make the user which attached to this policy to perfom any action in the EC2 but cant do any actions in the s3 cause of the explit deny
 - to test this create an user and give an name to the user
