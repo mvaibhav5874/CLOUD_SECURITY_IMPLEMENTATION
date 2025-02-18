@@ -70,7 +70,7 @@ In this I am creating an IAM user and implemnting an policy that will granting t
 - The policy should be looking like this -> [deny](s3_deny.json)
 - If you try to access the s3 bucket from the IAM user this will show this 
   <img src="S3_deny.png">
-### DATA-ENCRIPTION:-
+### DATA-ENCRYPTION:-
 - At the top of AWS Management Console, in the search box, search for and choose S3 to open the Amazon S3 console.
 
 - In the navigation pane, choose Buckets.
