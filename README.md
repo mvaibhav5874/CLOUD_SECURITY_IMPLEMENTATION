@@ -119,6 +119,7 @@ In this I am creating an IAM user and implemnting an policy that will granting t
 
 - The clock image opens in a browser tab. 
 
-Note: The object is encrypted, but while it displays, it has to be decrypted. The service handles this decryption transparently.
+> [!Note]
+> The object is encrypted, but while it displays, it has to be decrypted. The service handles this decryption transparently.
 
-In this task, you reviewed the encryption settings on the bucket. You then uploaded an object to the bucket and accessed the object by using a public link for the object. Amazon S3 transparently decrypted the object before displaying it in the browser.
+In this task, We reviewed the encryption settings on the bucket. Then uploaded an object to the bucket and accessed the object by using a public link for the object. Amazon S3 transparently decrypted the object before displaying it in the browser.
